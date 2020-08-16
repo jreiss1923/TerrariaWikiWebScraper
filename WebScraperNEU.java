@@ -30,7 +30,7 @@ public class WebScraperNEU {
             String[] textArr = text.split("\n");
             boolean wantToPrint = false;
             for (int i = 0; i < textArr.length; i++) {
-                if (textArr[i].replaceAll("[^(A-Za-z0-9 ]","").equals("".join(" ", arraySearched))) {
+                if (textArr[i].replaceAll("[^(A-Za-z0-9 ]","").equals("".join(" ", arraySearched)) || textArr[i].trim().equals("Notes[edit | edit source]")) {
                     wantToPrint = true;
                 }
                 else if (textArr[i].trim().equals("History[edit | edit source]")) {
